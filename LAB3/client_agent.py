@@ -41,7 +41,7 @@ class ClientAgent(Agent):
         async def run(self):
             msg = await self.receive(timeout=30)
             if msg and msg.metadata.get("type") == protocol.TYPE_OCR_RESULT:
-                print(f"🏆 RÉSULTAT REÇU PAR LE CLIENT : {msg.body}")
+                print(f"RÉSULTAT REÇU PAR LE CLIENT : {msg.body}")
 
     async def setup(self):
         print(f"Client Agent démarré ({self.jid})")
